@@ -45,6 +45,24 @@ li {
   text-align: center;
 }
 
+
+header{
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  left: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+header a{
+  letter-spacing: 0.05em;
+  font-size: 1.1em;
+  transition: all ease 0.3s;
+}
+header a:hover{
+  color: #999;
+}
+
 /*-------------------------------------------
 Mainvisual
 -------------------------------------------*/
@@ -106,7 +124,7 @@ Gallery
 Access
 -------------------------------------------*/
 #access {
-  margin-bottom: 480px;
+  margin-bottom: 200px;
   position: relative;
   z-index: 20;
 }
@@ -130,6 +148,14 @@ Access
 }
 #access .btn:hover {
   background-color: #050507;
+}
+#access .gmap{
+  width: 600px;
+  height: 400px;
+}
+
+#twitter{
+  margin-bottom: 200px;
 }
 
 /*-------------------------------------------
