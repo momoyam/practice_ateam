@@ -49,16 +49,18 @@ li {
 }
 
 
-header{
+
+header .head_left{
   position: fixed;
-  /* top: 40px;
-  right: 40px;
-  left: 40px; */
-  display: flex;
-  justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.82);
-  padding: 32px 102px;
-  width: 100%;
+  z-index: 100;
+  top: 40px;
+  left: 102px;
+}
+header .head_right{
+  position: fixed;
+  z-index: 100;
+  top: 40px;
+  right: 102px;
 }
 header a{
   letter-spacing: 0.05em;
@@ -72,6 +74,7 @@ header .head_rogo{
   font-weight: 700;
   font-size: 24px;
 }
+
 
 /*-------------------------------------------
 Mainvisual
@@ -173,9 +176,6 @@ margin-top: -300px;
   height: auto;
 }
 
-#gallery .list .img6{
-
-}
 #gallery .list .img6 img{
   width: 316px;
   height: auto;
@@ -378,7 +378,7 @@ footer{
   justify-content: space-between;
   align-items: center;
   margin-bottom: 65px;
-  /* background-color: #000; */
+  background-color: #050507;
 }
 footer .foot_left{
   margin-left: 102px;
@@ -415,27 +415,73 @@ footer .foot_right a img{
 
 
 
-/* 
-header{
-  position: fixed;
-  /* top: 40px;
-  right: 40px;
-  left: 40px; */
-  /* display: flex;
-  justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.82);
-  padding: 32px 102px;
-  width: 100%;
+/*-------------------------------------------
+fadein
+-------------------------------------------*/
+.fadein[data-emergence=hidden] {
+  /* 指定した領域から外れたときの処理 */
+   opacity: 0;
+   transition: 2s ease;
 }
-header a{
-  letter-spacing: 0.05em;
-  font-size: 1.1em;
-  transition: all ease 0.3s;
+.fadein[data-emergence=visible] {
+  /* 指定した領域に入ったときの処理 */
+    opacity: 1;
+    transition: 2s ease;
+    transform: translateY(0);
+  }
+
+.fadeinup[data-emergence=hidden] {
+  /* 指定した領域から外れたときの処理 */
+   opacity: 0;
+   transition: 2s ease;
+   transform: translateY(50px);
 }
-header a:hover{
-  color: #999;
+  
+.fadeinup[data-emergence=visible] {
+/* 指定した領域に入ったときの処理 */
+  opacity: 1;
+  transition: 2s ease;
+  transform: translateY(0);
 }
-header .head_rogo{
-  font-weight: 700;
-  font-size: 24px;
-} */
+
+.fadeinup_fv[data-emergence=hidden] {
+  /* 指定した領域から外れたときの処理 */
+   opacity: 0;
+   transition: 1.5s ease;
+   transform: translateY(100px);
+}
+  
+.fadeinup_fv[data-emergence=visible] {
+/* 指定した領域に入ったときの処理 */
+  opacity: 1;
+  transition: 1.5s ease;
+  transform: translateY(0);
+}
+
+.fadeindown[data-emergence=hidden] {
+  /* 指定した領域から外れたときの処理 */
+   opacity: 0;
+   transition: 3s ease;
+   transform: translateY(-100px);
+}
+  
+.fadeindown[data-emergence=visible] {
+/* 指定した領域に入ったときの処理 */
+  opacity: 1;
+  transition: 3s ease;
+  transform: translateY(0);
+}
+
+.fadeinupup_fv[data-emergence=hidden] {
+  /* 指定した領域から外れたときの処理 */
+   opacity: 0;
+   transition: 4s ease;
+   transform: translateY(100px);
+}
+  
+.fadeinupup_fv[data-emergence=visible] {
+/* 指定した領域に入ったときの処理 */
+  opacity: 1;
+  transition: 4s ease;
+  transform: translateY(0);
+}
