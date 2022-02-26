@@ -305,6 +305,11 @@ text-align: left;
   width: 380px;
   }
 
+  dd .send:hover{
+   opacity: 0.9;
+   transition:all .2s ease;
+    }
+  
 
 
 /*
