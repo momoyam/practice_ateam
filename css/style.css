@@ -48,20 +48,16 @@ li {
   text-align: center;
 }
 
-
-
-header .head_left{
+header{
   position: fixed;
   z-index: 100;
-  top: 40px;
-  left: 102px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.82);
+  padding: 32px 102px;
+  width: 100%;
 }
-header .head_right{
-  position: fixed;
-  z-index: 100;
-  top: 40px;
-  right: 102px;
-}
+
 header a{
   letter-spacing: 0.05em;
   font-size: 1.1em;
